@@ -4,6 +4,6 @@
 ## **_Shawn Bagné Tieffing_**
 * First year of _Toegepaste Informatica_
 * this is for Mobile & Internet 
-* I am on the Odisee University College
+* I'm on Odisee University College
 * Born the 31 July 1995 
 ###### _(yes i'm already 23 let me be 🙄)_
