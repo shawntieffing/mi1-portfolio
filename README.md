@@ -2,7 +2,6 @@
 ## This is me 😏:
 ![alt text](https://github.com/shawntieffing/mi1-portfolio/blob/master/My%20face.jpg "my face")
 ## **_Shawn Bagné Tieffing_**
----
 * First year of _Toegepaste Informatica_
 * for Mobile & Internet 
 * I study on Odisee University College
