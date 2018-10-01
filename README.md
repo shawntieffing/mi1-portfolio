@@ -1,2 +1,2 @@
 # mi1-portfolio
-(mi1-portfolio/UNADJUSTEDNONRAW_thumb_4.jpg "foto")
+!(https://github.com/shawntieffing/mi1-portfolio/blob/master/UNADJUSTEDNONRAW_thumb_4.jpg "foto")
