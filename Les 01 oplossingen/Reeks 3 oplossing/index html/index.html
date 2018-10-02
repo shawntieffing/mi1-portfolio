@@ -30,58 +30,61 @@
 		{Part I of a <a href="#" title="two-part">two-part</a> series.}
 	</p>
 	<p>
-		Ask an IT person if they know what Slashdot’s tagline is and they’ll reply, <q>News for Nerds. Stuff that Matters.</q> Slashdot is a very<br/>
+		Ask an IT person if they know what Slashdot’s tagline is and they’ll reply, <q>News for Nerds. Stuff that Matters.</q> Slashdot is a very<br>
 		prominent site, but underneath the hood you will find an old jalopy that could benefit from a web standards mechanic.
 	</p>
 	<p>
-		In this article we will show how an engine overhaul could take place by converting a single Slashdot page from their current<br/>
-		HTML 3.2 code, nested tables, and invalid, nonsemantic markup, to a finely tuned web standards racing engine. The goal is not to<br/>
+		In this article we will show how an engine overhaul could take place by converting a single Slashdot page from their current<br>
+		HTML 3.2 code, nested tables, and invalid, nonsemantic markup, to a finely tuned web standards racing engine. The goal is not to
+		<br>
 		change Slashdot, but to rebuild it with web standards and show the benefits of the transition.
 	</p>
 	<p>
 		Before you panic because I’m picking on Slashdot, let me inform you that I asked Rob “CmdrTaco” Malda, the guru behind
-		<br/>
+		<br>
 		Slashdot, for permission to post this information, and he stated in his reply email:
 	</p>
 	<blockquote>
 		Have fun. Feel free to submit patches back to us if you come up with anything useful. Slashdot's source code is open
-		<br/>
+		<br>
 		source and available at <a href="#" title="www.slashcode.com">www.slashcode.com.</a>
 	</blockquote>
 	<h3>The breakdown</h3>
 	<p>
 		We started by freezing a copy of Slashdot on Tuesday July 22, 2003. Once we had a
-		<a href="#" title="copy of the page">copy of the page</a>, the first step was to remove<br/>
-		all non-essential tags. The only tags left were anchors, lists, forms, images, scripts and header information. From the stripped down<br/>
-		version, the code was converted to XHTML 1.0 Transitional, and validated. At this point, the page looks like a minefield of links in<br/>
+		<a href="#" title="copy of the page">copy of the page</a>, the first step was to remove<br>
+		all non-essential tags. The only tags left were anchors, lists, forms, images, scripts and header information. From the stripped down<br>
+		version, the code was converted to XHTML 1.0 Transitional, and validated. At this point, the page looks like a minefield of links in<br>
 		a sea of information. It’s valid, but not pretty to look at, so on to the next step.
 	</p>
 	<h3>The semantic conversion</h3>
 	<p>
-		While viewing the now-valid markup, it became apparent that most of the information would be better described as lists. For<br/>
-		example, the images for the categories of Slashdot were now just sitting next to each other. Essentially, anything that there was<br/>
-		more than two of was put it into a list, for example: login, sections, help, stories, about, services, etc. Lists can be described and<br/>
-		positioned in any way that we want, and by stating that elements are part of a list, we are describing their relationship to each other.
+		While viewing the now-valid markup, it became apparent that most of the information would be better described as lists. For<br>
+		example, the images for the categories of Slashdot were now just sitting next to each other. Essentially, anything that there was<br>
+		more than two of was put it into a list, for example: login, sections, help, stories, about, services, etc. Lists can be
+		described and<br>
+		positioned in any way that we want, and by stating that elements are part of a list, we are describing their relationship to
+		each other.
 	</p>
 	<p>
-		The next step was to use header tags. The page has lots of titles and information, but none of the information was described<br/>
+		The next step was to use header tags. The page has lots of titles and information, but none of the information was described<br>
 		appropriately or explained its relationship to other bits of information. So we gave the title of an article an
-		<code><</code><code>h1</code><code>></code>, the author<br/>
-		information an <code><</code><code>h2</code><code>></code>, the department received an
-		<code><</code><code>h3</code><code>></code>, and the “read more” area an 
-		<code><</code><code>h4</code><code>></code>. This then uniquely identified each part of<br/>
-		information of an article, while describing the relationship of those parts. Then came the simple part: identify paragraphs, and clean<br/>
+		<code>&lt;h1&gt;</code>, the author<br>
+		information an <code>&lt;h2&gt;</code>, the department received an <code>&lt;h3&gt;</code>, and the “read more” area an
+		<code>&lt;h4&gt;</code>. This then uniquely identified each part of<br>
+		information of an article, while describing the relationship of those parts. Then came the simple part: identify paragraphs, and
+		clean<br>
 		up the code.
 	</p>
 	<p>
-		The benefit of the semantic conversion is that we are using tags for what they were meant for. It is clear that a list of objects<br/>
+		The benefit of the semantic conversion is that we are using tags for what they were meant for. It is clear that a list of objects<br>
 		belongs together, and there is a title hierarchy. Another benefit is that this also helps with
 		<a href="#" title="search engine optimization">search engine optimization</a>.
 	</p>
 	<h3>Boxes everywhere</h3>
 	<p>
-		What we have now is a a jumbled mess of well-described information. The information needs to be bound together, with<br/>relationships to other information. To begin with, each article is placed into a
-		<code><</code><code>div class="node"</code><code>></code>. Now all information about an<br/>
+		What we have now is a a jumbled mess of well-described information. The information needs to be bound together, with<br>relationships to other information. To begin with, each article is placed into a
+		<code><</code><code>div class="node"</code><code>></code>. Now all information about an<br>
 		article belongs together and all articles are equal, with hierarchy established by the physical order they are placed in.
 	</p>
 	<p>
@@ -95,35 +98,37 @@
 		<li><code><</code><code>div id="footer"</code><code>></code></li>
 	</ul>
 	<p>
-		The purpose of boxing the information into <code><</code><code>div</code><code>></code> is so that information is logically grouped together, which makes shaping the<br/>
-		information easier. The CSS can now address each information group and assign attributes to it, such as layout and design. It’s not<br/>
+		The purpose of boxing the information into <code><</code><code>div</code><code>></code> is so that information is logically grouped together, which makes shaping the<br>
+		information easier. The CSS can now address each information group and assign attributes to it, such as layout and design. It’s not<br>
 		necessarily semantic, but it is necessary for the presentation. Here’s the
-		<a href="#" title="semantically organized example">semantically organized example</a>. There’s no CSS layout,<br/>
+		<a href="#" title="semantically organized example">semantically organized example</a>. There’s no CSS layout,<br>
 		yet; it’s just structured markup.
 	</p>
 	<h3>The reconstruction of the skeleton</h3>
 	<p>
-		Now that each information group is identified by a <code><</code><code>div</code><code>></code>, the page is shaped with CSS so that the design matches the old look and<br/>
-		feel. This is a matter of time, patience, and practice. The first goal is not to mimic the old site, but to get things to position<br/>
-		themselves correctly in the three-column format with an overall header / masthead and footer. This becomes the first CSS file:<br/>
+		Now that each information group is identified by a <code><</code><code>div</code><code>></code>, the page is shaped with CSS so that the design matches the old look and<br>
+		feel. This is a matter of time, patience, and practice. The first goal is not to mimic the old site, but to get things to position<br>
+		themselves correctly in the three-column format with an overall header / masthead and footer. This becomes the first CSS file:
+		<br>
 		<code><a href="#" title="layout.css">layout.css</a></code>.
 	</p>
 	<p>
-		The benefit of positioning a page with a single CSS file is simple: you know where to look if there is a positioning problem. Often,<br/>
-		if you have a problem, it is usually with the positioning. In this step, we were mindful of the page’s behavior in a variety of<br/>
-		browsers, so we choose to utilize the <samp>@import</samp> feature, as any browsers that don’t support that directive will not get the layout. This<br/>
+		The benefit of positioning a page with a single CSS file is simple: you know where to look if there is a positioning problem. Often,<br>
+		if you have a problem, it is usually with the positioning. In this step, we were mindful of the page’s behavior in a variety of
+		<br>
+		browsers, so we choose to utilize the <samp>@import</samp> feature, as any browsers that don’t support that directive will not get the layout. This<br>
 		includes web-enabled cell phones, PDA devices, old browsers, and other Internet devices. Here’s the page
-		<a href="#" title="with the positioning CSS applied">with the positioning CSS<br/>
+		<a href="#" title="with the positioning CSS applied">with the positioning CSS<br>
 		applied</a>.
 	</p>
 	<h3>Applying the skin</h3>
 	<p>
-		Now we have the page displaying the correct layout, but it still doesn’t look like Slashdot. The second CSS file that is attached is<br/>
-		the <code><a href="#" title="markup.css">markup.css</a></code>, which contains information about fonts, colors, background images, and the way lists are displayed. Here’s the<br/>
+		Now we have the page displaying the correct layout, but it still doesn’t look like Slashdot. The second CSS file that is attached is<br>
+		the <code><a href="#" title="markup.css">markup.css</a></code>, which contains information about fonts, colors, background images, and the way lists are displayed. Here’s the<br>
 		<a href="#" title="final example">final example</a>.
 	</p>
 	<p>
-		We also have the ability to add a <a href="#" title="second skin">second skin</a> if we want to give the user an option on how they want to view the page. The second<br/>
+		We also have the ability to add a <a href="#" title="second skin">second skin</a> if we want to give the user an option on how they want to view the page. The second<br>
 		skin doesn’t have to duplicate all of the layout information, which should already be cached from the
 		<code>layout.css</code> file.
 	</p>
@@ -138,19 +143,20 @@
   <code><</code>/style<code>></code>
 <code><</code>/head<code>></code></pre>
 	<p>
-		In this example, the <code>layout.css</code> file is linked with a media type of <code>screen</code>. This is intentional. The information there is only<br/>
-		important for display on a screen, it doesn’t have any benefit for printed media type, or any other (aural, tv, braille, etc.) for that<br/>
-		matter. The <code>markup.css</code> file, which is the “skin” of the page, is imported, and thus hidden from noncompliant web devices because<br/>
+		In this example, the <code>layout.css</code> file is linked with a media type of <code>screen</code>. This is intentional. The information there is only<br>
+		important for display on a screen, it doesn’t have any benefit for printed media type, or any other (aural, tv, braille, etc.) for that<br>
+		matter. The <code>markup.css</code> file, which is the “skin” of the page, is imported, and thus hidden from noncompliant web devices because<br>
 		some of its features could be harmful or interpreted incorrectly.
 	</p>
 	<h3>Benefits!</h3>
 	<p>
-		The page will now correctly render in standards-compliant browsers, just as it did before, and will fail gracefully for non-standard<br/>
-		browsers. So, while the design is not as pretty in very old browsers, the content is still available to their users. It is also much cleaner<br/>
+		The page will now correctly render in standards-compliant browsers, just as it did before, and will fail gracefully for non-standard<br>
+		browsers. So, while the design is not as pretty in very old browsers, the content is still available to their users. It is also
+		much cleaner<br>
 		and more predictable with screen readers. By having the CSS fail gracefully, content is even available to PDAs and
-		web<br/>
+		web<br>
 		phones. Plus, there are no horizontal scroll bars! Finally, there is also a
-		<a href="#" title="printer-friendly version">printer-friendly version</a> using only CSS (no separate<br/>
+		<a href="#" title="printer-friendly version">printer-friendly version</a> using only CSS (no separate<br>
 		“printer-friendly” page). Perhaps the biggest benefit of this particular example is the bandwidth savings:
 	</p>
 	<ul>
@@ -159,9 +165,9 @@
 	</ul>
 	<p>
 		Though a few KB doesn't sound like a lot of bandwidth, let’s add it up. Slashdot’s FAQ, last updated 13 June 2000,
-		<a href="#" title="states">states</a> that they<br/>
+		<a href="#" title="states">states</a> that they<br>
 		serve 50 million pages in a month. When you break down the figures, that’s ~1,612,900 pages per day or ~18 pages per
-		second.<br/>
+		second.<br>
 		Bandwidth savings are as follows:
 	</p>
 	<ul>
@@ -169,24 +175,26 @@
 		<li>Savings per day <em>with</em> caching the CSS files: <em>~14 GB bandwidth</em></li>
 	</ul>
 	<p>
-		Most Slashdot visitors would have the CSS file cached, so we could ballpark the daily savings at ~10 GB bandwidth. A high<br/>
-		volume of bandwidth from an ISP could be anywhere from $1-$5 cost per GB of transfer, but let's calculate it at $1 per GB for an<br/>
+		Most Slashdot visitors would have the CSS file cached, so we could ballpark the daily savings at ~10 GB bandwidth. A high<br>
+		volume of bandwidth from an ISP could be anywhere from $1-$5 cost per GB of transfer, but let's calculate it at $1 per GB for an
+		<br>
 		entire year. For this example, the <em>total yearly savings for Slashdot would be: $3,650</em> USD!
 	</p>
 	<p>
-		<em>Remember: this calculation is based on the number of pages served as of 13 June, 2000. I believe that Slashdot’s traffic is much<br/>
+		<em>Remember: this calculation is based on the number of pages served as of 13 June, 2000. I believe that Slashdot’s traffic is
+		much<br>
 		heavier now, but even using this three-year-old figure, the money saved is impressive.</em>
 	</p>
 	<p>
 		Everything explained so far is discussed in more detail at the University of Wisconsin-Platteville’s
-		<a href="#" title="Slashdot Web Standards example site">Slashdot Web Standards<br/>
+		<a href="#" title="Slashdot Web Standards example site">Slashdot Web Standards<br>
 		example site</a>.
 	</p>
 	<h3>The challenge</h3>
 	<p>
 		I now challenge the ALA community. We need a good web standards mechanic (or team of mechanics) to dig though
-		Slashdot’s<br/>
-		engine, Slashcode, and make it web-standards-compliant. CmdrTaco has encouraged us to submit patches, and I know we can show<br/>
+		Slashdot’s<br>
+		engine, Slashcode, and make it web-standards-compliant. CmdrTaco has encouraged us to submit patches, and I know we can show<br>
 		the benefits! The challenge is there - any takers?
 	</p>
 	<p>
@@ -206,9 +214,9 @@
 	<h3>About the Author</h3>
 	<p>
 		<img src="img/short_hair_silhouette.jpg"> Daniel M. Frommelt is the University World Wide Web Coordinator at the
-		<a href="#" title="University of Wisconsin-Platteville">University of Wisconsin-Platteville</a>, an<br/>
+		<a href="#" title="University of Wisconsin-Platteville">University of Wisconsin-Platteville</a>, an<br>
 		executive committee member of the
-		<a href="#" title="Campus Web Council of Wisconsin">Campus Web Council of Wisconsin</a>, and a web standards advocate. Daniel spends his free time<br/>
+		<a href="#" title="Campus Web Council of Wisconsin">Campus Web Council of Wisconsin</a>, and a web standards advocate. Daniel spends his free time<br>
 		brewing beer.
 	</p>
 	<p>
@@ -226,7 +234,7 @@
 	<h4>Snapshot</h4>
 	<p>
 		A look at the markup behind Slashdot.org that demonstrates how simple - and cost-effective - the switch to a
-		standards-<br/>
+		standards-<br>
 		compliant Slashdot could be. (Part I of a two-part series.)
 	</p>
 	<p>
