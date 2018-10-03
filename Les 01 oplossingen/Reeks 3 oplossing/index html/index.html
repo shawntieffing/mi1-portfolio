@@ -84,51 +84,61 @@
 	<h3>Boxes everywhere</h3>
 	<p>
 		What we have now is a a jumbled mess of well-described information. The information needs to be bound together, with<br>relationships to other information. To begin with, each article is placed into a
-		<code><</code><code>div class="node"</code><code>></code>. Now all information about an<br>
+		<code>&lt;div class="node"&gt;</code>. Now all information about an<br>
 		article belongs together and all articles are equal, with hierarchy established by the physical order they are placed in.
 	</p>
 	<p>
-		Next, we uniquely identify each remaining information group, and encapsulate them in their own <code><</code><code>div</code><code>></code>. For instance:
+		Next, we uniquely identify each remaining information group, and encapsulate them in their own <code>&lt;div&rt;</code>.
+		For instance:
 	</p>
 	<ul>
-		<li><code><</code><code>div id="advertisement"</code><code>></code></li>
-		<li><code><</code><code>div id="header"</code><code>></code></li>
-		<li><code><</code><code>div id="leftcolumn"</code><code>></code></li>
-		<li><code><</code><code>div id="centercolumn"</code><code>></code></li>
-		<li><code><</code><code>div id="footer"</code><code>></code></li>
+		<li><code>&lt;div id="advertisement"&rt;</code></li>
+		<li><code>&lt;div id="header"&rt;</code></li>
+		<li><code>&lt;div id="leftcolumn"&rt;</code></li>
+		<li><code>&lt;div id="centercolumn"&rt;</code></li>
+		<li><code>&lt;div id="footer"&rt;</code></li>
 	</ul>
 	<p>
-		The purpose of boxing the information into <code><</code><code>div</code><code>></code> is so that information is logically grouped together, which makes shaping the<br>
-		information easier. The CSS can now address each information group and assign attributes to it, such as layout and design. It’s not<br>
+		The purpose of boxing the information into <code>&lt;div&rt;</code> is so that information is logically grouped together, which
+		makes shaping the<br>
+		information easier. The CSS can now address each information group and assign attributes to it, such as layout and design. It’s
+		not<br>
 		necessarily semantic, but it is necessary for the presentation. Here’s the
 		<a href="#" title="semantically organized example">semantically organized example</a>. There’s no CSS layout,<br>
 		yet; it’s just structured markup.
 	</p>
 	<h3>The reconstruction of the skeleton</h3>
 	<p>
-		Now that each information group is identified by a <code><</code><code>div</code><code>></code>, the page is shaped with CSS so that the design matches the old look and<br>
-		feel. This is a matter of time, patience, and practice. The first goal is not to mimic the old site, but to get things to position<br>
+		Now that each information group is identified by a <code>&lt;div&rt;</code>, the page is shaped with CSS so
+		that the design matches the old look and<br>
+		feel. This is a matter of time, patience, and practice. The first goal is not to mimic the old site, but to get things to
+		position<br>
 		themselves correctly in the three-column format with an overall header / masthead and footer. This becomes the first CSS file:
 		<br>
 		<code><a href="#" title="layout.css">layout.css</a></code>.
 	</p>
 	<p>
-		The benefit of positioning a page with a single CSS file is simple: you know where to look if there is a positioning problem. Often,<br>
+		The benefit of positioning a page with a single CSS file is simple: you know where to look if there is a positioning problem.
+		Often,<br>
 		if you have a problem, it is usually with the positioning. In this step, we were mindful of the page’s behavior in a variety of
 		<br>
-		browsers, so we choose to utilize the <samp>@import</samp> feature, as any browsers that don’t support that directive will not get the layout. This<br>
+		browsers, so we choose to utilize the <samp>@import</samp> feature, as any browsers that don’t support that directive will not
+		get the layout. This<br>
 		includes web-enabled cell phones, PDA devices, old browsers, and other Internet devices. Here’s the page
 		<a href="#" title="with the positioning CSS applied">with the positioning CSS<br>
 		applied</a>.
 	</p>
 	<h3>Applying the skin</h3>
 	<p>
-		Now we have the page displaying the correct layout, but it still doesn’t look like Slashdot. The second CSS file that is attached is<br>
-		the <code><a href="#" title="markup.css">markup.css</a></code>, which contains information about fonts, colors, background images, and the way lists are displayed. Here’s the<br>
+		Now we have the page displaying the correct layout, but it still doesn’t look like Slashdot. The second CSS file that is
+		attached is<br>
+		the <code><a href="#" title="markup.css">markup.css</a></code>, which contains information about fonts, colors, background
+		images, and the way lists are displayed. Here’s the<br>
 		<a href="#" title="final example">final example</a>.
 	</p>
 	<p>
-		We also have the ability to add a <a href="#" title="second skin">second skin</a> if we want to give the user an option on how they want to view the page. The second<br>
+		We also have the ability to add a <a href="#" title="second skin">second skin</a> if we want to give the user an option on how
+		they want to view the page. The second<br>
 		skin doesn’t have to duplicate all of the layout information, which should already be cached from the
 		<code>layout.css</code> file.
 	</p>
@@ -136,12 +146,12 @@
 	<p>
 		We link the CSS files in the header to complete the transition.
 	</p>
-	<pre><code><</code>head<code>></code>
-  <code><</code>link rel="stylesheet" type="text/css" href="styles/layout.css" media='screen' /<code>></code>
-  <code><</code>style type="text/css"<code>></code>
+	<pre>&lt;head&rt;
+  &lt;link rel="stylesheet" type="text/css" href="styles/layout.css" media='screen' /&rt;
+  &lt;style type="text/css"&rt;
     @import "styles/markup.css";
-  <code><</code>/style<code>></code>
-<code><</code>/head<code>></code></pre>
+  &lt;/style&rt;
+&lt;/head&rt;</pre>
 	<p>
 		In this example, the <code>layout.css</code> file is linked with a media type of <code>screen</code>. This is intentional. The information there is only<br>
 		important for display on a screen, it doesn’t have any benefit for printed media type, or any other (aural, tv, braille, etc.) for that<br>
