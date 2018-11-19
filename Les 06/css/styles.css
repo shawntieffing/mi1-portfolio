@@ -1,0 +1,131 @@
+body {
+    font-size: 14px;
+    font-family: arial;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+small {
+    text-align: center;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol {
+    list-style-type: lower-alpha;
+}
+
+#langmenu {
+    font-size: 10px;
+}
+
+#profile-photo {
+    width: 200px;
+    padding: 10px;
+    border: 5px solid #ddd;
+    filter: grayscale(50%)
+}
+
+#profile-photo:hover {
+    filter: grayscale(0%);
+}
+
+a.active {
+    text-decoration: underline;
+}
+
+div.comment {
+    background-color: #ddd;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 1px dotted #f09;
+}
+
+::selection {
+    background-color: #a52a2aec;
+    color: #fff;
+}
+
+p.intro::first-letter {
+    font-size: 30px;
+    color: #f09;
+}
+
+ul.weetjes {
+    list-style: none;
+}
+
+ul.weetjes li::before {
+    content: '🌹 ';
+}
+
+main a {
+    color: #239600;
+}
+
+main a:hover {
+    color: #4adf1d
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+footer a {
+    color: #b84949;
+}
+
+figure {
+    margin-left: 0px;
+}
+figure > img {
+    margin-left: 40px;
+}
+
+figure:first-child {
+    margin-left: 0px;
+}
+
+#tel::before {
+    content: 'T: ';
+}
+
+ #mail::before {
+    content: 'E: ';
+}
+
+li:nth-child(2) {
+    color: #f09;
+} 
+
+li:nth-child(4) {
+    color: #f09;
+} 
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+}
