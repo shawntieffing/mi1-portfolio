@@ -1,0 +1,166 @@
+/**
+ * Index stylesheet for Mutw
+ *
+ * @author      Rogier van der Linde <rogier.vanderlinde@kahosl.be>
+ * @author 		Shawn Tieffng
+ */
+
+/* =============================================
+ * LAYOUT
+ =============================================== */
+main .wrapper {
+	display: flex;
+	flex-flow: row nowrap;	
+}
+
+main .column {
+	width: 30%;
+}
+
+main .column + .column {
+	margin-left: 5%;
+}
+
+/* =============================================
+ * BANNER
+ =============================================== */
+#banner {
+	background-color: #62717d;
+	background-image: url(../img/mutwhero.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40rem 18rem;
+}
+
+#banner div.wrapper {
+	color: #fffafa;
+	font-size: 1.5rem;
+	padding-top: 16rem;
+	padding-bottom: 1rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* =============================================
+ * MAIN
+ =============================================== */
+
+main img {
+	max-width: 100%;
+}
+
+.column h3 {
+	border-bottom: 0.1rem solid #f2771d;
+	color: #3d5aac;
+	font-weight: 300;
+	font-size: 3rem;
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.column img {
+	margin-top: 2rem;
+}
+
+.column p {
+	line-height: 1.9;
+}
+
+.column {
+	margin-bottom: 6rem;
+}
+
+#socialmedia, .column ul + p {
+	text-align: center;
+}
+
+.column3 {
+	text-align: center;
+}
+
+.lnk_more {
+	border: 0.1rem solid #f2771d;
+	border-radius: 0.5rem;
+	color: #f2771d;
+	float: right;
+	font-size: 1.3rem;
+	margin-top: 2rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.2s all ease-in-out;
+}
+
+.lnk_more::after {
+	content: ' »';
+}
+
+.lnk_more:hover {
+	background-color: #f2771d;
+	color: #fffafa;
+}
+#socialmedia li {
+	display: inline-flex;
+	list-style: none;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	margin-right: -0.4rem;
+}
+
+
+.facebook {
+	width: 4rem;
+	height: 4rem;
+	white-space: nowrap;
+	text-indent: 100%;
+	overflow: hidden;
+	background-image: url(../img/icon_facebook.png);
+	background-size: 100% 100%;
+	transition: 0.2s all ease-in-out;
+}
+
+.facebook:hover {
+	background-image: url(../img/icon_facebook_over.png);
+}
+
+.twitter {
+	width: 4rem;
+	height: 4rem;
+	white-space: nowrap;
+	text-indent: 100%;
+	overflow: hidden;
+	background-image: url(../img/icon_twitter.png);
+	background-size: 100% 100%;
+	transition: 0.2s all ease-in-out;
+}
+
+.twitter:hover {
+	background-image: url(../img/icon_twitter_over.png);
+}
+
+.pinterest {
+	width: 4rem;
+	height: 4rem;
+	white-space: nowrap;
+	text-indent: 100%;
+	overflow: hidden;
+	background-image: url(../img/icon_pinterest.png);
+	background-size: 100% 100%;
+	transition: 0.2s all ease-in-out;
+}
+
+.pinterest:hover {
+	background-image: url(../img/icon_pinterest_over.png);
+}
+
+.lnk_mail {
+	color: #f2771d;
+	text-decoration: none;
+}
+
+.lnk_mail:hover {
+	text-decoration: underline;
+}

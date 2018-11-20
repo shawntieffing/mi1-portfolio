@@ -1,0 +1,129 @@
+/**
+ * General stylesheet for Mutw
+ *
+ * @author Rogier van der Linde <rogier.vanderlinde@kahosl.be>
+ * @author Shawn Tieffing 
+ */
+
+/* =============================================
+ * GENERAL
+ =============================================== */
+	
+body {
+	color: #222;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.3rem;
+	line-height: 2.4;
+}
+
+h2, h3 {
+	font-family: 'Exo', sans-serif;
+}
+
+h2 {
+	font-weight: 300;
+}
+
+/* =============================================
+ * LAYOUT
+ =============================================== */
+
+.wrapper {
+	max-width: 96rem; 
+	margin: 0 auto; /* center horizontally */
+}
+
+header .wrapper {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+
+/* =============================================
+ * HEADER
+ =============================================== */
+header {
+	background-color: #485865;
+}
+
+h1 a {
+	display: block; /* only block level elements can have width / height */
+	width: 16rem; /* stretch link to desired width */
+	height: 10rem; /* stretch link to desired height */
+	white-space: nowrap; /* single line of text */
+	text-indent: 100%; /* push text outside */
+	overflow: hidden;  /* hide text outside */
+	background-image: url(../img/mutwlogo.png); /* set background image */
+	background-size: 100% 100%; /* stretch background image */
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+nav ul {
+	margin-top: 3rem;
+}
+
+nav li {
+	display: inline-block;
+	text-transform: uppercase;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	font-family: 'Exo', sans-serif;
+	font-size: 1.4rem;
+}
+
+nav a {
+	text-decoration: none;
+	color: #fffafa;
+}
+
+nav a:hover {
+	color: #f2771d;
+}
+
+a.active {
+	color: #f2771d;
+}
+
+/* =============================================
+ * DOORMAT
+ =============================================== */
+
+#doormat {
+	background-color: #62717d;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	text-align: center;
+}
+
+
+#doormat li {
+	display: inline-block;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	text-transform: lowercase;
+}
+
+#doormat a {
+	color: #fffafa;
+}
+
+#doormat a:hover {
+	text-decoration: none;
+}
+
+/* =============================================
+ * FOOTER
+ =============================================== */
+
+footer {
+	background-color: #485865;
+	color: #fffafa;
+	font-size: 1.2rem;
+	letter-spacing: 0.2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	text-align: center;
+}
