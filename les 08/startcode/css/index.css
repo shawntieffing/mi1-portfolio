@@ -1,0 +1,249 @@
+/*=======================================================*/
+/* MAIN CONTENT */
+
+main > .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+main {
+    margin-bottom: 6rem;
+}
+
+/*========================================================*/
+/* MAIN LEFT & MAIN RIGHT COLUMN AND TITLE STYLE */
+
+.main_left, .main_right {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+
+.main_left {
+    width: 60%;
+}
+
+.main_right {
+    width: 40%;
+}
+
+.main_left img, .main_right img {
+    width: 100%;
+}
+
+.main_left h3, .main_right h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.main_left h3::after, .main_right h3::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    border-bottom: 0.1rem solid #c0627b;
+    margin: 1rem 0 2.5rem;
+}
+
+/*========================================================*/
+/* MAIN LEFT ARTICLES */
+
+main article + article {
+    margin-top: 4rem;
+}
+
+.main_left article {
+    background-color: #e4e4e4;
+    overflow: auto;
+    width: 85%;
+}
+
+.main_left h4 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+}
+
+.main_left ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.2rem 0 3rem;
+}
+
+.main_left li {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.main_left li, .main_left a {
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+}
+
+.main_left li:nth-child(2)::before, .main_left li:nth-child(3)::before{
+    content: '■ ';
+    margin-right: 0.5rem;
+}
+
+.main_left p {
+    font-size: 1.4rem;
+    margin-left: 1.8rem;
+    line-height: 2.3rem;
+    width: 93%;
+}
+
+.main_left p::first-letter {
+    font-size: 3rem;
+}
+
+#lnk-read-more-article, #lnk-read-more-article-2 {
+    float: right;
+    margin-top: 2rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    border: 0.15rem solid #000;
+    padding: 0.9rem 1.3rem;
+    font-size: 1.1rem;
+    transition: all 150ms ease-in-out;
+}
+
+#lnk-read-more-article:hover, #lnk-read-more-article-2:hover {
+    color: #e4e4e4;
+    background-color: #000;
+}
+
+/*========================================================*/
+/* MAIN RIGHT ARTICLES */
+
+.main_right h3 + img {
+    width: 50%;
+    float: right;
+    margin-left: 2rem;
+}
+
+.main_right img + p {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    margin-right: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.popular-posts {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.popular-posts section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    border-bottom: 0.1rem dotted #c5c4c4;
+}
+
+.popular-posts img {
+    width: 11.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.popular-posts section + section {
+    margin-top: 2.5rem;
+}
+
+.popular-posts div {
+    margin: 0.2rem 0 0 2rem;
+}
+
+.popular-posts div a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.35rem;
+    font-weight: 400;
+}
+
+.popular-posts div p {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+#drop-me-a-line {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+}
+
+.main_right label {
+    font-size: 1.4rem;
+}
+
+#name, #email {
+    display: block;
+    background-color: #e4e4e4;
+    border-radius: 0.8rem;
+    border: none;
+    width: 67%;
+    height: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 0.3rem;
+}
+
+#message {
+    display: block;
+    background-color: #e4e4e4;
+    border-radius: 0.8rem;
+    border: none;
+    width: 87%;
+    height: 10rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.3rem;
+}
+
+button {
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: #c0627b;
+    color: #fff;
+    border-radius: 0.8rem;
+    width: 67%;
+    height: 3.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/*========================================================*/
+/* FOOTER */
+footer::before {
+    content: '';
+    display: block;
+    position: relative;
+    left: 17%;
+    right: 17%;
+    height: 0.2rem;
+    background-color: #c5c4c4;
+    width: 66%;
+}
+footer .wrapper {
+    margin-top: 2.5rem;
+    padding-bottom: 4rem;
+}
+footer .wrapper small {
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+}
+
+footer .wrapper p {
+    float: right;
+    font-size: 1.2rem;
+}

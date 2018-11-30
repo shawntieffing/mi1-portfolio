@@ -1,0 +1,150 @@
+/* BODY */ 
+body{
+color: #444;
+}
+
+.wrapper {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+/*===========================================*/
+/* TOPBAR */
+#topbar {
+    background-color: #e4e4e4;
+    overflow: auto;
+}
+
+#topbar ul {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    float: left;
+}
+
+#topbar li {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+#topbar li a {
+    font-size: 1.3rem;
+    color: #000000;
+    transition: all 150ms ease-in-out;
+}
+ 
+#topbar li a:hover {
+    color: #444;
+}
+
+#topbar form {
+    float: right;
+}
+
+#topbar form > label {
+    visibility: hidden;
+}
+
+#search {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    height: 2.5rem;
+    width: 18rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+/*===========================================*/
+/* HEADER STYLE */
+header {
+    overflow: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+#logo {
+    font-family: 'Dancing Script', cursive;
+    color: #444;
+    text-decoration: none;
+    font-size: 4rem;
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+nav li {
+    display: inline-flex;
+    list-style: none;
+    margin-left: 2rem;
+    text-transform: capitalize;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    transition: all 250ms ease-in-out;
+}
+
+nav a:hover {
+    color: #c0627b;
+}
+
+.active {
+    color: #c0627b;
+}
+
+/*===========================================*/
+/* BANNER */
+#banner {
+    background-image: url(../img/seoul_skyline.jpg);
+    background-position-y: 50%;
+    background-position-x: 70%;
+    background-repeat: no-repeat;
+    background-size: 150rem 65rem;
+    padding-bottom: 10rem;
+}
+
+#banner p {
+    padding-top: 3rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#banner h2 {
+    color: #ffffff;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    font-size: 3.7rem;
+    font-weight: 400;
+}
+
+#lnk-read-more {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0.15rem solid #ffffff;
+    padding: 0.8rem 2rem;
+    transition: all 250ms ease-in-out;
+}
+
+#lnk-read-more:hover {
+    background-color: #ffffffce;
+    color: #444;
+    border: 0.15rem solid #ffffff00;
+}
